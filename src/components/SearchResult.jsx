@@ -25,16 +25,15 @@ const SearchResult = () => {
       payload.searchType = "image";
     }
     fetchDataFromApi(payload).then((res) => {
-     
       setResult(res);
     });
   };
 
   if (!result) return;
   const { items, queries, searchInformation } = result;
- 
+
   return (
-    <div className="flex flex-col  min-h-[100vh]">
+    <div className="flex flex-col min-h-[100dvh]">
       <SearchResultHeader />
       <main className="grow p-[12px] items-center flex flex-col pb-0 md:pr-5 md:pl-20">
         <div className="flex text-lg  font-bold mb-3 drop-shadow-lg animate__animated animate__fadeInDown">{`About ${searchInformation.formattedTotalResults} results in (${searchInformation.formattedSearchTime})`}</div>

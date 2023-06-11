@@ -6,11 +6,10 @@ import Logo from "../assets/logo.png";
 import { pagination } from "../utils/Constants";
 
 const Pagination = ({ queries }) => {
- 
   const { query } = useParams();
   const [page, setPage] = useState(pagination[0].startIndex);
   const navigate = useNavigate();
-
+ 
   useEffect(() => {
     setPage(pagination[0].startIndex);
   }, [query]);
@@ -23,11 +22,11 @@ const Pagination = ({ queries }) => {
   return (
     <div className="flex flex-col items-center py-14 max-w-[700px]">
       <div className="relative text-[#4285f4]">
-        {/* {queries.nextPage[0].startIndex > 1 && (
+        {queries.previousPage && (
           <div
             className="absolute left-[-30px] md:left-[-40px] top-[10px]"
             onClick={() =>
-              paginationClickHandler(queries.nextPage[0].startIndex - 1)
+              paginationClickHandler(queries.previousPage[0].startIndex)
             }
           >
             <FiChevronLeft size={20} className="cursor-pointer" />
@@ -35,7 +34,7 @@ const Pagination = ({ queries }) => {
               Prev
             </span>
           </div>
-        )} */}
+        )}
 
         <Link to={"/"}>
           <img
@@ -43,7 +42,7 @@ const Pagination = ({ queries }) => {
             src={Logo}
           />
         </Link>
-        {/* {queries.nextPage && (
+        {queries.nextPage && (
           <div
             className="absolute right-[-30px] md:right-[-40px] top-[10px]"
             onClick={() =>
@@ -55,7 +54,7 @@ const Pagination = ({ queries }) => {
               Next
             </span>
           </div>
-        )} */}
+        )}
       </div>
       <div className="flex gap-3 flex-wrap  justify-center text-[#4285f4] text-sm">
         {pagination.map((p) => (

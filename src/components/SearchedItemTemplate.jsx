@@ -3,7 +3,7 @@ const SearchedItemTemplate = ({ data }) => {
     return { _html: html };
   }
   return (
-    <div className="flex animate__animated animate__fadeInUp flex-col py-3 max-w-[700px] md:hover:scale-115 hover:scale-105 hover:shadow-2xl transition-transform shadow-lg px-4  rounded-lg my-3">
+    <div className="flex animate__animated animate__fadeInUp border flex-col py-3 max-w-[700px] md:hover:scale-115 hover:scale-105 hover:shadow-2xl transition-transform shadow-lg px-4  rounded-lg my-3">
       <div
         className="group cursor-pointer"
         onClick={() => window.open(data.link)}

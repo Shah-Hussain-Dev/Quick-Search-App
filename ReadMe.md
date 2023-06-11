@@ -1,6 +1,7 @@
-# Welcome to React Native PVR Movie Booking App🔥!
+# Welcome to Quick Search App🔥!
+## A Mini Search Engine 
+This is a Mini Search Engine where we can search Information and Images with the help of Custom Google Search Api.
 
-This is PVR Movie Book App clone in React Native for both Android and IOS Platforms.
 
 ## Available Scripts
 
