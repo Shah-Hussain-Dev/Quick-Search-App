@@ -25,14 +25,14 @@ const SearchResult = () => {
       payload.searchType = "image";
     }
     fetchDataFromApi(payload).then((res) => {
-      console.log(res);
+     
       setResult(res);
     });
   };
 
   if (!result) return;
   const { items, queries, searchInformation } = result;
-  console.log(result);
+ 
   return (
     <div className="flex flex-col  min-h-[100vh]">
       <SearchResultHeader />

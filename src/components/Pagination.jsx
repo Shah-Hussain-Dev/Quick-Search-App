@@ -6,7 +6,7 @@ import Logo from "../assets/logo.png";
 import { pagination } from "../utils/Constants";
 
 const Pagination = ({ queries }) => {
-  console.log(queries);
+ 
   const { query } = useParams();
   const [page, setPage] = useState(pagination[0].startIndex);
   const navigate = useNavigate();
